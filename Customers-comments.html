@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @font-face {
+            font-family: vazir;
+            src: url(assets/Vazir.ttf);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: vazir;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width: 400px;
+            border: 2px solid rgb(120, 162, 175);
+            border-radius: 15px;
+            padding: 40px 20px;
+            /* visibility: hidden; */
+            transform: translateX(-30px);
+            transition: 0.7s;
+            display: none;
+            animation: move;
+            animation-timing-function: ease-in-out;
+            /* animation-duration: 2s; */
+        }
+        p{
+            text-align: justify;
+        }
+        span{
+            color: rgb(67, 167, 197);
+            font-weight: bold;
+        }
+        img{
+            border-radius: 50%;
+            height: 80px;
+            border: 5px solid rgb(0, 141, 184);
+            cursor: pointer;
+            transition: 0.7s;
+            opacity: 0.3;
+        }
+        .indicator{
+            margin-top: 20px;
+        }
+        h1{
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+        .active{
+            display: block;
+            transform: translateX(0);
+            animation: move;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>نظرات مشتریان</h1>
+    <section>
+        <div class="box1 box active">
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد </p>
+            <span>سارا مرادی</span>
+        </div>
+        <div class="box2 box">
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد </p>
+            <span>نازنین اسدی</span>
+        </div>
+        <div class="box3 box">
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد </p>
+            <span>نغمه پوررحیم</span>
+        </div>
+        <div class="box4 box">
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد </p>
+            <span>مارال علیزاده</span>
+        </div>
+    </section>
+
+    <div class="indicator">
+        <img src="assets/img1.png" alt="" width="80px" style="opacity: 1;">
+        <img src="assets/img2.png" alt="" width="80px">
+        <img src="assets/img3.png" alt="" width="80px">
+        <img src="assets/img4.png" alt="" width="80px">
+    </div>
+    <script>
+        var images = document.querySelectorAll('img')
+        var boxes = document.querySelectorAll('.box')
+
+        images.forEach((img) => {
+            console.log(img);
+            img.addEventListener('click' , function(j){
+                images.forEach(item => {
+                    item.style.opacity = 0.3
+                });
+                img.style.opacity = 1
+
+            })
+        });
+
+        images.forEach((item , i) => {
+            item.addEventListener('click' , function(){
+                boxes.forEach(element => {
+                    boxes[i].style.transform = 'translateX(-30px)'
+                    element.style.display = 'none'
+                    // boxes[i].style.animation = 'none'
+
+                    // element.style.visibility = 'hidden'
+                });
+                boxes[i].style.display = 'block'
+                boxes[i].style.animation = 'move'
+                boxes[i].style.animationDuration = '2s'
+                // element.style.visibility = 'visible'
+                boxes[i].style.transform = 'translateX(0)'
+
+            })
+        });
+
+        // boxes.forEach(qw => {
+        //     qw.style.animation = 'move'
+        // });
+
+
+    </script>
+</body>
+</html>
