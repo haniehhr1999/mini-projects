@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.css"
+        integrity="sha512-+Zybl5OKqmaXx42ysgDdEODFRj8kLRQFy87G77NWmQxS8JMiQhDKovhffSaUuMDyaKxZOZrzouVbQMtBrUcv7w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @font-face {
+            font-family: vazir;
+            src: url(assets/Vazir.ttf);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+        }
+        .con-icon{
+            background: rgb(167, 0, 189);
+            padding: 0 10px;
+            cursor: pointer;
+            border-radius: 50px 0 0 50px;
+        }
+        .con-icon i{
+            color: white;
+            font-size: 20px;
+            display: inline-block;
+            padding-top: 7px;
+        }
+        input{
+            font-family: vazir;
+            width: 0;
+            height: 35px;
+            box-sizing: border-box;
+            padding-right: 0;
+            border: 1px solid rgb(167, 0, 189);
+            border-radius: 0;
+            transition: 1s ease-in-out;
+            outline: none;
+            caret: rgb(167, 0, 189);
+        }
+        input[placeholder], [placeholder], *[placeholder] {
+            color: rgb(167, 0, 189) !important;
+        }
+        .active{
+            width: 250px;
+            padding-right: 18px;
+            border-radius: 0 50px 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" placeholder="جستجو کنید...">
+        <div class="con-icon"><i class="mdi mdi-search-web"></i></div>
+    </div>
+
+    <script>
+        var input = document.querySelector('input')
+        var icon = document.querySelector('.con-icon')
+        icon.addEventListener('click' , function(){
+            input.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>
