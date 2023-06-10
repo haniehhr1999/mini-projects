@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.css"
+        integrity="sha512-+Zybl5OKqmaXx42ysgDdEODFRj8kLRQFy87G77NWmQxS8JMiQhDKovhffSaUuMDyaKxZOZrzouVbQMtBrUcv7w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @font-face {
+            font-family: vazir;
+            src: url(assets/Vazir.ttf);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: vazir;
+        }
+        body{
+            height: auto;
+            background-color: rgb(16, 44, 69);
+            overflow-x: hidden;
+        }
+        .container{
+            background-color: white;
+            padding: 50px 40px;
+            transform-origin: top right;
+            transition: 1s;
+            /* min-height: 100vh; */
+        }
+        .con-circle{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(0, 145, 255);
+            border-radius: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /* position: fixed; */
+            top: -100px;
+            right: -90px;
+            transform: rotate(45deg);
+            transition: 1s;
+        }
+        .con-circle:hover{
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.445);
+        }
+        .con-circle i{
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            font-size: 25px;
+        }
+        .mdi-menu{
+            /* left: 5px; */
+            bottom: 25px;
+            transform: rotate(-45deg);
+            transition: 1s;
+        }
+        .mdi-close{
+            left: 15px;
+            top: 58px;
+            opacity: 0;
+        }
+        ul {
+            position: fixed;
+            list-style: none;
+            right: 20px;
+            bottom: 50px; 
+            transition: 1s;
+            transform: translateX(150px);
+        }
+        ul li{
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+        ul li i {
+            margin-left: 10px; 
+
+        }
+        .toggle{
+            transform : rotate(15deg)
+        }
+        .toggle .mdi-menu{
+            transform : rotate(-54deg);
+            opacity: 0;
+        }
+        .toggle .mdi-close{
+            transform : rotate(-54deg);
+            opacity: 1;
+        }
+        .toggle .con-circle{
+            transform : rotate(-54deg);
+        }
+        .toggle + ul{
+            transform : translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="con-circle">
+            <i class="mdi mdi-menu"></i>
+            <i class="mdi mdi-close"></i>
+        </div>
+        <h1>لندینگ پیج من</h1>
+        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+        <img src="assets/img1.png" alt="" width="600px">
+        <h2>عنوان دوم</h2>
+        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+    </div>
+    <ul>
+        <li><i class="mdi mdi-home"></i>خانه</li>
+        <li><i class="mdi mdi-contacts"></i>تماس با ما</li>
+        <li><i class="mdi mdi-message"></i>درباره ما</li>
+    </ul>
+
+    <script>
+        var menu = document.querySelector('.mdi-menu')
+        var close1 = document.querySelector('.mdi-close')
+        var container = document.querySelector('.container')
+        var ul = document.querySelector('ul')
+        var circle = document.querySelector('.con-circle')
+
+        menu.addEventListener('click' , function(){
+            container.classList.toggle('toggle')
+            // container.style.transform = 'rotate(15deg)'
+            // menu.style.transform = 'rotate(-54deg)'
+            // menu.style.opacity = 0
+            // close1.style.transform = 'rotate(-54deg)'
+            // circle.style.transform = 'rotate(-54deg)'
+            // ul.style.transform = 'translateX(0)'
+        })
+        close1.addEventListener('click' , function(){
+            container.classList.toggle('toggle')
+        })
+    </script>
+</body>
+</html>
