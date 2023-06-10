@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: vazir;
+            src: url(assets/Vazir.ttf);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: vazir;
+        }
+        .container{
+            background: url(assets/p404.png);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            background-color: rgb(0, 0, 65);
+            color: white;
+        }
+        .container h1{
+            font-size: 150px;
+        }
+        .container h4{
+            font-size: 50px;
+        }
+        .container p{
+            margin-top: 70px;
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <h4>صفحه مورد نظر یافت نشد </h4>
+        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
+    </div>
+
+    <script>
+        var container = document.querySelector('.container')
+        window.addEventListener('mousemove' , function(e){
+            var x = e.clientX / 8;
+            var y = e.clientY / 8;
+            console.log(x);
+            container.style.backgroundPositionX = `${x}px`
+            container.style.backgroundPositionY = `${y}px`
+        })
+    </script>
+</body>
+</html>
