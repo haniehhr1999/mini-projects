@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: vazir;
+            src: url(assets/Vazir.ttf);
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        *{
+            font-family: vazir;
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+        p{
+            color: rgb(170, 170, 170);
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        .container{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea name="" id="textBox" cols="30" rows="10" maxlength="250" placeholder="چیزی بنویسید..."></textarea>
+        <p>250 کاراکتر باقی مانده است</p>
+    </div>
+    <script>
+        var textBox = document.querySelector('#textBox')
+        var alarm = document.querySelector('p')
+        
+        textBox.addEventListener('input' , function(e){
+            var total = 250
+            var txt = e.target.value
+            var beghiMande = total - txt.length
+            alarm.innerHTML = `${beghiMande} کاراکتر باقی مانده است`
+            
+            if (beghiMande < 25) {
+                alarm.style.color = 'red'
+            }
+            if (beghiMande > 25) {
+                alarm.style.color = 'grey'
+            }
+
+            if(beghiMande < 0){
+                // alert('نمیتونی')
+                textBox.setAttribute( 'disabled' , 'disabled')
+                beghiMande = 0
+                alarm.innerHTML = `${beghiMande} کاراکتر باقی مانده است`
+            }
+        })
+    </script>
+</body>
+</html>
