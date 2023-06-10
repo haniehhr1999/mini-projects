@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: vazir;
+            src: url(assets/Vazir.ttf);
+        }
+        @keyframes cheshmak {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        *{
+            font-family: vazir;
+        }
+        span{
+            color: red;
+        }
+        span::after{
+            content: '';
+            border-right: 2px solid red;
+            animation: cheshmak 0.5s infinite ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        حانیه رحیم:
+        <span>طراح وبسایت</span>
+    </h1>
+
+    <script>
+        var array = ['طراح وبسایت های شرکتی' , 'گرافیست و ادیتور' , 'ادمین اینستاگرام']
+
+        let item = 0
+        let index = 0
+
+        let x = ''
+        let y = ''
+
+        function type(){
+            if (item === array.length) {
+                item = 0
+            }
+            x = array[item]
+            y = x.slice(0 , ++index)
+
+            document.querySelector('span').innerHTML = y
+
+            if (y.length == x.length) {
+                item++
+                index = 0
+            }
+            setTimeout(() => {
+                type()
+            }, 100);
+        }
+        type()
+    </script>
+</body>
+</html>
