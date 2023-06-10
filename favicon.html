@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favred.png" type="image/x-icon" class="fav">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: vazir;
+            src: url(assets/Vazir.ttf);
+        }
+        body{
+            text-align: center;
+            font-family: vazir;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .red{
+            border: 2px solid rgb(211, 0, 0);
+            background: #fff;
+            font-family: vazir;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 30px;
+            padding: 10px 30px;
+            margin-right: 20px;
+            transition: 0.5s;
+        }
+        .red:hover{
+            background-color: rgb(211, 0, 0);
+            color: #fff;
+        }
+        .green{
+            border: 2px solid rgb(13, 131, 0);
+            background: #fff;
+            font-family: vazir;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 30px;
+            padding: 10px 30px;
+            margin-right: 20px;
+            transition: 0.5s;
+        }
+        .green:hover{
+            background-color: rgb(13, 131, 0);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>جهت تغییر رنگ فیوآیکن کلیک کنید</h1>
+    <div class="container">
+        <button class="red">قرمز</button>
+        <button class="green">سبز</button>
+    </div>
+    <script>
+        var red = document.querySelector('.red')
+        var green = document.querySelector('.green')
+        var favIcon = document.querySelector('.fav')
+
+        red.addEventListener('click' , toRed )
+        function toRed(){
+            favIcon.setAttribute('href' , 'assets/favred.png')
+        }
+
+        green.addEventListener('click' , toGreen )
+        function toGreen(){
+            favIcon.setAttribute('href' , 'assets/green.png')
+        }
+
+
+    </script>
+</body>
+</html>
