@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: vazir;
+            src: url(assets/Vazir.ttf);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: vazir;
+        }
+        ul{
+            background-color: rgb(0, 38, 85);
+            color: white;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 30px 0;
+        }
+        li{
+            width: 100px;
+            transition: 0.5s;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 7px;
+            padding: 7px 15px;
+            /* margin: 0 20px ; */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>خانه</li>
+        <li>درباره ما</li>
+        <li>تماس با ما</li>
+        <li>بلاگ</li>
+    </ul>
+
+
+
+    <script>
+        var li = document.querySelectorAll('li')
+        li.forEach(element => {
+            element.addEventListener('click' , function(){
+                li.forEach(item => {
+                    item.style.backgroundColor = 'transparent'
+                });
+                element.style.backgroundColor = '#6891cd'
+
+            })
+        });
+    </script>
+</body>
+</html>
